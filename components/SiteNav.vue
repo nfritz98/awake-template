@@ -27,9 +27,10 @@
         <li
           v-for="item in $siteConfig.mainMenu"
           :key="item.link"
-          class="navbar-item"
           @click="active = false"
+          class="navbar-item"
         >
+          <!-- eslint-disable-next-line vue/require-component-is-->
           <component
             :is="item.link.startsWith('http') ? 'a' : 'nuxt-link'"
             :href="item.link"

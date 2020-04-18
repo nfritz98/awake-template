@@ -27,6 +27,7 @@ export const getByNumberMixin = {
       this.reset()
     }
     this.gottenPage++
+    // eslint-disable-next-line no-useless-catch
     try {
       const resources = await this.getByPage(this.gottenPage)
       const filtered = resources.filter(filter)
@@ -64,6 +65,7 @@ export const getByPageMixin = {
         return resource
       }
     }
+    // eslint-disable-next-line no-useless-catch
     try {
       let categories = await this.axios.$get(
         `api/${this.slugPlural}/page-${page}.json`

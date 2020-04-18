@@ -1,6 +1,7 @@
 <template>
   <div class="card">
     <div class="card-image">
+      <!-- eslint-disable-next-line vue/require-component-is-->
       <component :is="link ? 'nuxt-link' : 'span'" :to="link">
         <figure :class="`image is-${imageRatioClass}`">
           <opti-image

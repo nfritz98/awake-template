@@ -37,10 +37,10 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: this.$store.state.featureImage 
-          ? (process.env.URL ? process.env.URL : '') +
-            require(`~/assets${this.$store.state.featureImage}`)
-          : ''
+          content: this.$store.state.featureImage
+            ? (process.env.URL ? process.env.URL : '') +
+              require(`~/assets${this.$store.state.featureImage}`)
+            : ''
         },
         {
           hid: 'og:url',
@@ -50,7 +50,7 @@ export default {
         {
           hid: 'twitter:card',
           name: 'twitter:card',
-          content: `summary_large_image`
+          content: 'summary_large_image'
         },
         {
           hid: 'og:site_name',
